@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Basic Test">
+
+    <test name="Chrome Test">
+        <parameter name="browser" value="chrome"></parameter>
+
+        <groups>
+            <run>
+                <include name="basic"/>
+            </run>
+        </groups>
+        
+        <classes>
+
+            <class name="tests.BaseTest"></class>
+            <class name="tests.LoginTest">
+                <parameter name="emailUsername" value="qa.tester999@test.com"></parameter>
+                <parameter name="password" value="Srbija1."></parameter>
+
+            </class>
+
+        </classes>
+
+    </test>
+
+    <test name="Firefox Test">
+        <parameter name="browser" value="firefox"></parameter>
+
+        <groups>
+            <run>
+                <include name="basic"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="tests.BaseTest"></class>
+            <class name="tests.LoginTest">
+                <parameter name="emailUsername" value="qa.tester999@test.com"></parameter>
+                <parameter name="password" value="Srbija1."></parameter>
+
+            </class>
+        </classes>
+
+    </test>
+
+</suite>
+//done

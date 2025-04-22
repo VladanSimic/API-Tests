@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression test">
+
+    <test name="Chrome test">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="tests.SignInTest">
+                <parameter name="username" value="standard_user"></parameter>
+                <parameter name="password" value="secret_sauce"></parameter>
+            </class>
+            <class name="tests.LoginTest"></class>
+        </classes>
+    </test>
+
+</suite>
